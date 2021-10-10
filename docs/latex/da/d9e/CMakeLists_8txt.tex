@@ -1,0 +1,68 @@
+\hypertarget{CMakeLists_8txt}{}\doxysection{C\+Make\+Lists.\+txt File Reference}
+\label{CMakeLists_8txt}\index{CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CMakeLists_8txt_a29d8fd3efa6cca32071b912549078deb}{cmake\+\_\+minimum\+\_\+required}} (V\+E\+R\+S\+I\+ON 3.\+0) project(html\+\_\+imshow V\+E\+R\+S\+I\+ON 0.\+1.\+0 L\+A\+N\+G\+U\+A\+G\+ES C\+XX) \mbox{\hyperlink{CMakeLists_8txt_ae3ebb6d511dad62498e0a90c49d81765}{set}}(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+F\+L\+A\+GS \char`\"{}-\/O2 -\/Wall -\/pthread\char`\"{}) set(C\+M\+A\+K\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY \$
+\item 
+bin \mbox{\hyperlink{CMakeLists_8txt_ae3ebb6d511dad62498e0a90c49d81765}{set}} (C\+M\+A\+K\+E\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY \$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+IR\}/lib) set(C\+M\+A\+K\+E\+\_\+\+A\+R\+C\+H\+I\+V\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY \$
+\item 
+lib \mbox{\hyperlink{CMakeLists_8txt_aac76000d734b3797f121410cba34d5d8}{include\+\_\+directories}} (\$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+IR\}/include \$\{Open\+C\+V\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+RS\}) link\+\_\+directories(\$
+\item 
+\mbox{\hyperlink{CMakeLists_8txt_abc2ab667f2d78425b34005f132d28239}{add\+\_\+library}} (html\+\_\+imshow S\+T\+A\+T\+IC src/html\+\_\+imshow.\+cpp) \mbox{\hyperlink{CMakeLists_8txt_ac5a35ef4e6f4e5a16b568899b69e031f}{install}}(T\+A\+R\+G\+E\+TS html\+\_\+imshow E\+X\+P\+O\+RT html\+\_\+imshow-\/config D\+E\+S\+T\+I\+N\+A\+T\+I\+ON lib/cmake/html\+\_\+imshow A\+R\+C\+H\+I\+VE D\+E\+S\+T\+I\+N\+A\+T\+I\+ON lib L\+I\+B\+R\+A\+RY D\+E\+S\+T\+I\+N\+A\+T\+I\+ON lib) \mbox{\hyperlink{CMakeLists_8txt_ac5a35ef4e6f4e5a16b568899b69e031f}{install}}(F\+I\+L\+ES include/html\+\_\+imshow.\+hpp D\+E\+S\+T\+I\+N\+A\+T\+I\+ON include/html\+\_\+imshow) include(C\+Make\+Package\+Config\+Helpers) write\+\_\+basic\+\_\+package\+\_\+version\+\_\+file(\$
+\item 
+html\+\_\+imshow config version cmake C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+TY Same\+Major\+Version \mbox{\hyperlink{CMakeLists_8txt_ac5a35ef4e6f4e5a16b568899b69e031f}{install}} (F\+I\+L\+ES \$\{C\+M\+A\+K\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/html\+\_\+imshow-\/config-\/version.\+cmake D\+E\+S\+T\+I\+N\+A\+T\+I\+ON lib/cmake/html\+\_\+imshow) install(E\+X\+P\+O\+RT html\+\_\+imshow-\/config D\+E\+S\+T\+I\+N\+A\+T\+I\+ON lib/cmake/html\+\_\+imshow) install(D\+I\+R\+E\+C\+T\+O\+RY \$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CMakeLists_8txt_abc2ab667f2d78425b34005f132d28239}\label{CMakeLists_8txt_abc2ab667f2d78425b34005f132d28239}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!add\_library@{add\_library}}
+\index{add\_library@{add\_library}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{add\_library()}{add\_library()}}
+{\footnotesize\ttfamily add\+\_\+library (\begin{DoxyParamCaption}\item[{html\+\_\+imshow S\+T\+A\+T\+IC src/html\+\_\+imshow.}]{cpp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file C\+Make\+Lists.\+txt.
+
+\mbox{\Hypertarget{CMakeLists_8txt_a29d8fd3efa6cca32071b912549078deb}\label{CMakeLists_8txt_a29d8fd3efa6cca32071b912549078deb}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{V\+E\+R\+S\+I\+ON 3.}]{0 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file C\+Make\+Lists.\+txt.
+
+\mbox{\Hypertarget{CMakeLists_8txt_aac76000d734b3797f121410cba34d5d8}\label{CMakeLists_8txt_aac76000d734b3797f121410cba34d5d8}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!include\_directories@{include\_directories}}
+\index{include\_directories@{include\_directories}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{include\_directories()}{include\_directories()}}
+{\footnotesize\ttfamily lib include\+\_\+directories (\begin{DoxyParamCaption}\item[{}]{\$\{\+P\+R\+O\+J\+E\+C\+T\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+R\}/include \$\{\+Open\+C\+V\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+R\+S\} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file C\+Make\+Lists.\+txt.
+
+\mbox{\Hypertarget{CMakeLists_8txt_ac5a35ef4e6f4e5a16b568899b69e031f}\label{CMakeLists_8txt_ac5a35ef4e6f4e5a16b568899b69e031f}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!install@{install}}
+\index{install@{install}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{install()}{install()}}
+{\footnotesize\ttfamily html\+\_\+imshow config version cmake C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+TY Same\+Major\+Version install (\begin{DoxyParamCaption}\item[{F\+I\+L\+ES \$\{C\+M\+A\+K\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/html\+\_\+imshow-\/config-\/version.\+cmake D\+E\+S\+T\+I\+N\+A\+T\+I\+ON lib/cmake/}]{html\+\_\+imshow }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file C\+Make\+Lists.\+txt.
+
+\mbox{\Hypertarget{CMakeLists_8txt_ae3ebb6d511dad62498e0a90c49d81765}\label{CMakeLists_8txt_ae3ebb6d511dad62498e0a90c49d81765}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!set@{set}}
+\index{set@{set}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily bin set (\begin{DoxyParamCaption}\item[{C\+M\+A\+K\+E\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY \$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+IR\}/}]{lib }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file C\+Make\+Lists.\+txt.
+

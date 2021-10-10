@@ -1,0 +1,244 @@
+\hypertarget{classHtmlImshow}{}\doxysection{Html\+Imshow Class Reference}
+\label{classHtmlImshow}\index{HtmlImshow@{HtmlImshow}}
+
+
+{\ttfamily \#include $<$html\+\_\+imshow.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structHtmlImshow_1_1ImageInfo}{Image\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHtmlImshow_a798230a1c8f54cac04256d3b9b2cb9bb}{Html\+Imshow}} (std\+::string output\+\_\+file\+\_\+path)
+\item 
+\mbox{\hyperlink{classHtmlImshow_a9bfc94ec5e1adda6ac0ef9d6961a0bb7}{$\sim$\+Html\+Imshow}} ()
+\item 
+void \mbox{\hyperlink{classHtmlImshow_a2e3ddca81d671f3e94b3a1493066f074}{Create\+Header}} (std\+::string title, std\+::string language)
+\begin{DoxyCompactList}\small\item\em Create H\+T\+ML Header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHtmlImshow_a5c998fa6227c25cff44839d4417ed244}{Create\+Footer}} (void)
+\begin{DoxyCompactList}\small\item\em Create H\+T\+ML Footer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHtmlImshow_af6aaf28d33c03399eb2dacc7bb52c99e}{Create\+Image\+View\+Space}} (std\+::string \&image\+\_\+space, std\+::string image\+\_\+path, \mbox{\hyperlink{structHtmlImshow_1_1ImageInfo}{Image\+Info}} \&info, int space\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Create H\+T\+ML Image View Space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHtmlImshow_a2eb21fc86e75bbffbaa3d43b4983f5aa}{Add\+Image\+View\+Space}} (std\+::string image\+\_\+path, \mbox{\hyperlink{structHtmlImshow_1_1ImageInfo}{Image\+Info}} \&info)
+\begin{DoxyCompactList}\small\item\em Add Image View Space in H\+T\+ML file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHtmlImshow_ac0f92acbf084cd9c9cf770463da89be6}{Output\+To\+Html}} (void)
+\begin{DoxyCompactList}\small\item\em Create H\+T\+ML File to show image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classHtmlImshow_a9e9d42b8a670eb8ca15615d02fb9c6dd}{\+\_\+space\+\_\+id}}
+\item 
+std\+::string \mbox{\hyperlink{classHtmlImshow_ae752dac0c1792ce3b4867ed637922c17}{\+\_\+output\+\_\+file\+\_\+path}}
+\item 
+std\+::string \mbox{\hyperlink{classHtmlImshow_ad48622800f72f62092d8e37717b924ef}{\+\_\+header}}
+\item 
+std\+::string \mbox{\hyperlink{classHtmlImshow_a2edf07e79238de3cbd026aa31bff9f75}{\+\_\+footer}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classHtmlImshow_a7b06959cee3af14c915ee6774080b04a}{\+\_\+image\+\_\+spaces}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file html\+\_\+imshow.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHtmlImshow_a798230a1c8f54cac04256d3b9b2cb9bb}\label{classHtmlImshow_a798230a1c8f54cac04256d3b9b2cb9bb}} 
+\index{HtmlImshow@{HtmlImshow}!HtmlImshow@{HtmlImshow}}
+\index{HtmlImshow@{HtmlImshow}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{HtmlImshow()}{HtmlImshow()}}
+{\footnotesize\ttfamily Html\+Imshow\+::\+Html\+Imshow (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 22 of file html\+\_\+imshow.\+hpp.
+
+\mbox{\Hypertarget{classHtmlImshow_a9bfc94ec5e1adda6ac0ef9d6961a0bb7}\label{classHtmlImshow_a9bfc94ec5e1adda6ac0ef9d6961a0bb7}} 
+\index{HtmlImshow@{HtmlImshow}!````~HtmlImshow@{$\sim$HtmlImshow}}
+\index{````~HtmlImshow@{$\sim$HtmlImshow}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{$\sim$HtmlImshow()}{~HtmlImshow()}}
+{\footnotesize\ttfamily Html\+Imshow\+::$\sim$\+Html\+Imshow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 26 of file html\+\_\+imshow.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHtmlImshow_a2eb21fc86e75bbffbaa3d43b4983f5aa}\label{classHtmlImshow_a2eb21fc86e75bbffbaa3d43b4983f5aa}} 
+\index{HtmlImshow@{HtmlImshow}!AddImageViewSpace@{AddImageViewSpace}}
+\index{AddImageViewSpace@{AddImageViewSpace}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{AddImageViewSpace()}{AddImageViewSpace()}}
+{\footnotesize\ttfamily void Html\+Imshow\+::\+Add\+Image\+View\+Space (\begin{DoxyParamCaption}\item[{std\+::string}]{image\+\_\+path,  }\item[{\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo}{Image\+Info}} \&}]{info }\end{DoxyParamCaption})}
+
+
+
+Add Image View Space in H\+T\+ML file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+path} & path of image to show \\
+\hline
+{\em info} & Information of image (title, width, height) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file html\+\_\+imshow.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dda/classHtmlImshow_a2eb21fc86e75bbffbaa3d43b4983f5aa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classHtmlImshow_a5c998fa6227c25cff44839d4417ed244}\label{classHtmlImshow_a5c998fa6227c25cff44839d4417ed244}} 
+\index{HtmlImshow@{HtmlImshow}!CreateFooter@{CreateFooter}}
+\index{CreateFooter@{CreateFooter}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{CreateFooter()}{CreateFooter()}}
+{\footnotesize\ttfamily void Html\+Imshow\+::\+Create\+Footer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create H\+T\+ML Footer. 
+
+
+
+Definition at line 39 of file html\+\_\+imshow.\+cpp.
+
+\mbox{\Hypertarget{classHtmlImshow_a2e3ddca81d671f3e94b3a1493066f074}\label{classHtmlImshow_a2e3ddca81d671f3e94b3a1493066f074}} 
+\index{HtmlImshow@{HtmlImshow}!CreateHeader@{CreateHeader}}
+\index{CreateHeader@{CreateHeader}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{CreateHeader()}{CreateHeader()}}
+{\footnotesize\ttfamily void Html\+Imshow\+::\+Create\+Header (\begin{DoxyParamCaption}\item[{std\+::string}]{title,  }\item[{std\+::string}]{language = {\ttfamily \char`\"{}jp\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Create H\+T\+ML Header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Title of the page \\
+\hline
+{\em language} & Default language is \char`\"{}jp\char`\"{} (japanese). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file html\+\_\+imshow.\+cpp.
+
+\mbox{\Hypertarget{classHtmlImshow_af6aaf28d33c03399eb2dacc7bb52c99e}\label{classHtmlImshow_af6aaf28d33c03399eb2dacc7bb52c99e}} 
+\index{HtmlImshow@{HtmlImshow}!CreateImageViewSpace@{CreateImageViewSpace}}
+\index{CreateImageViewSpace@{CreateImageViewSpace}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{CreateImageViewSpace()}{CreateImageViewSpace()}}
+{\footnotesize\ttfamily void Html\+Imshow\+::\+Create\+Image\+View\+Space (\begin{DoxyParamCaption}\item[{std\+::string \&}]{image\+\_\+space,  }\item[{std\+::string}]{image\+\_\+path,  }\item[{\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo}{Image\+Info}} \&}]{info,  }\item[{int}]{space\+\_\+id = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Create H\+T\+ML Image View Space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+space} & \mbox{[}out\mbox{]} image space html code \\
+\hline
+{\em image\+\_\+path} & \mbox{[}in\mbox{]} path of image to show \\
+\hline
+{\em info} & \mbox{[}in\mbox{]} Infotmation of image(title, width, height) \\
+\hline
+{\em space\+\_\+id} & priority id of html space (optional) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file html\+\_\+imshow.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dda/classHtmlImshow_af6aaf28d33c03399eb2dacc7bb52c99e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classHtmlImshow_ac0f92acbf084cd9c9cf770463da89be6}\label{classHtmlImshow_ac0f92acbf084cd9c9cf770463da89be6}} 
+\index{HtmlImshow@{HtmlImshow}!OutputToHtml@{OutputToHtml}}
+\index{OutputToHtml@{OutputToHtml}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{OutputToHtml()}{OutputToHtml()}}
+{\footnotesize\ttfamily void Html\+Imshow\+::\+Output\+To\+Html (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create H\+T\+ML File to show image. 
+
+
+
+Definition at line 84 of file html\+\_\+imshow.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classHtmlImshow_a2edf07e79238de3cbd026aa31bff9f75}\label{classHtmlImshow_a2edf07e79238de3cbd026aa31bff9f75}} 
+\index{HtmlImshow@{HtmlImshow}!\_footer@{\_footer}}
+\index{\_footer@{\_footer}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{\_footer}{\_footer}}
+{\footnotesize\ttfamily std\+::string Html\+Imshow\+::\+\_\+footer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 18 of file html\+\_\+imshow.\+hpp.
+
+\mbox{\Hypertarget{classHtmlImshow_ad48622800f72f62092d8e37717b924ef}\label{classHtmlImshow_ad48622800f72f62092d8e37717b924ef}} 
+\index{HtmlImshow@{HtmlImshow}!\_header@{\_header}}
+\index{\_header@{\_header}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{\_header}{\_header}}
+{\footnotesize\ttfamily std\+::string Html\+Imshow\+::\+\_\+header\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 18 of file html\+\_\+imshow.\+hpp.
+
+\mbox{\Hypertarget{classHtmlImshow_a7b06959cee3af14c915ee6774080b04a}\label{classHtmlImshow_a7b06959cee3af14c915ee6774080b04a}} 
+\index{HtmlImshow@{HtmlImshow}!\_image\_spaces@{\_image\_spaces}}
+\index{\_image\_spaces@{\_image\_spaces}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{\_image\_spaces}{\_image\_spaces}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Html\+Imshow\+::\+\_\+image\+\_\+spaces\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file html\+\_\+imshow.\+hpp.
+
+\mbox{\Hypertarget{classHtmlImshow_ae752dac0c1792ce3b4867ed637922c17}\label{classHtmlImshow_ae752dac0c1792ce3b4867ed637922c17}} 
+\index{HtmlImshow@{HtmlImshow}!\_output\_file\_path@{\_output\_file\_path}}
+\index{\_output\_file\_path@{\_output\_file\_path}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{\_output\_file\_path}{\_output\_file\_path}}
+{\footnotesize\ttfamily std\+::string Html\+Imshow\+::\+\_\+output\+\_\+file\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file html\+\_\+imshow.\+hpp.
+
+\mbox{\Hypertarget{classHtmlImshow_a9e9d42b8a670eb8ca15615d02fb9c6dd}\label{classHtmlImshow_a9e9d42b8a670eb8ca15615d02fb9c6dd}} 
+\index{HtmlImshow@{HtmlImshow}!\_space\_id@{\_space\_id}}
+\index{\_space\_id@{\_space\_id}!HtmlImshow@{HtmlImshow}}
+\doxysubsubsection{\texorpdfstring{\_space\_id}{\_space\_id}}
+{\footnotesize\ttfamily int Html\+Imshow\+::\+\_\+space\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file html\+\_\+imshow.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{html__imshow_8hpp}{html\+\_\+imshow.\+hpp}}\item 
+src/\mbox{\hyperlink{html__imshow_8cpp}{html\+\_\+imshow.\+cpp}}\end{DoxyCompactItemize}
