@@ -1,7 +1,6 @@
 
 #include "html_imshow.hpp"
 
-
 int main(void)
 {
 
@@ -13,13 +12,13 @@ int main(void)
     info.title = "Lenna";
     info.width = 256;
     info.height = 256;
-    hi.AddImageViewSpace("../image/color/Lenna.bmp", info);
+    hi.AddImageViewSpace("../image/sample/Lenna.bmp", info);
 
     info.title="Balloon";
-    hi.AddImageViewSpace("../image/color/Balloon.bmp", info);
+    hi.AddImageViewSpace("../image/sample/Balloon.bmp", info);
 
     info.title="Aerial";
-    hi.AddImageViewSpace("../image/color/Aerial.bmp", info);
+    hi.AddImageViewSpace("../image/sample/Aerial.bmp", info);
 
     hi.OutputToHtml();
 

@@ -1,0 +1,187 @@
+\hypertarget{md_README_autotoc_md1}{}\doxysection{What is html\+\_\+imshow}\label{md_README_autotoc_md1}
+This is a html file creator with C++.
+
+While you are working image processing in W\+SL (Windows Subsystem for Linux), you may face a big problem.
+
+Yes, {\bfseries{you cannot use imshow with W\+SL}}.
+
+This is really bothering.
+
+So I made a simple library which is called html\+\_\+imshow.
+
+This is really simple. Just create html file with the image you want see.\hypertarget{md_README_autotoc_md2}{}\doxysection{Requirements}\label{md_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item C\+Make
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysection{How to use it?}\label{md_README_autotoc_md3}
+\hypertarget{md_README_autotoc_md4}{}\doxysubsection{Install}\label{md_README_autotoc_md4}
+First, clone this repo to your workspace. \begin{DoxyVerb}git clone https://github.com/RYO0115/html_imshow_for_wsl.git
+\end{DoxyVerb}
+
+
+move to html\+\_\+imshow\+\_\+for\+\_\+wsl directory and run below commands. \begin{DoxyVerb}cd build
+cmake ..
+make
+sudo make install
+\end{DoxyVerb}
+\hypertarget{md_README_autotoc_md5}{}\doxysubsection{Editing C\+Make\+Lists in your project}\label{md_README_autotoc_md5}
+After make install, you are ready for using this.
+
+Go to your project that you want to have a look with this library, and open \mbox{\hyperlink{CMakeLists_8txt}{C\+Make\+Lists.\+txt}} with your editor.
+
+What you need to do is just add find\+\_\+package() method and add this library to your application.
+
+Your new \mbox{\hyperlink{CMakeLists_8txt}{C\+Make\+Lists.\+txt}} will be look like this
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Cmake version}
+\DoxyCodeLine{cmake\_minimum\_required(VERSION 3.0)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Project Name and Language}
+\DoxyCodeLine{project(image\_process\_sample CXX)}
+\DoxyCodeLine{}
+\DoxyCodeLine{set(CMAKE\_CXX\_FLAGS "-\/O2 -\/Wall -\/pthread")}
+\DoxyCodeLine{}
+\DoxyCodeLine{find\_package(OpenCV REQUIRED)}
+\DoxyCodeLine{find\_package(html\_imshow REQUIRED)}
+\DoxyCodeLine{}
+\DoxyCodeLine{include\_directories(}
+\DoxyCodeLine{    \$\{PROJECT\_SOURCE\_DIR\}/include}
+\DoxyCodeLine{    \$\{OpenCV\_INCLUDE\_DIRS\}}
+\DoxyCodeLine{)}
+\DoxyCodeLine{}
+\DoxyCodeLine{link\_directories(}
+\DoxyCodeLine{    \$\{PROJECT\_SOURCE\_DIR\}}
+\DoxyCodeLine{)}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{add\_executable(opencv\_tester}
+\DoxyCodeLine{    src/opencv\_tester.cpp}
+\DoxyCodeLine{)}
+\DoxyCodeLine{}
+\DoxyCodeLine{target\_link\_libraries(}
+\DoxyCodeLine{    opencv\_tester}
+\DoxyCodeLine{    \$\{OpenCV\_LIBRARIES\}}
+\DoxyCodeLine{    html\_imshow}
+\DoxyCodeLine{)}
+\end{DoxyCode}
+
+
+What you need in here is \begin{DoxyVerb}find_package(html_inshow REQUIRED)
+\end{DoxyVerb}
+
+
+and adding {\bfseries{html\+\_\+imshow}} to your target\+\_\+link\+\_\+libraries. \begin{DoxyVerb}target_link_libraries(
+    opencv_tester
+    ${OpenCV_LIBRARIES}
+    html_imshow
+)
+\end{DoxyVerb}
+\hypertarget{md_README_autotoc_md6}{}\doxysubsection{Editing your .\+cpp code}\label{md_README_autotoc_md6}
+I have also added some sample in /test direcotry in this repo.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{html__imshow_8hpp}{html\_imshow.hpp}}>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{CMakeCXXCompilerId_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{classHtmlImshow}{HtmlImshow}} hi(\textcolor{stringliteral}{"test.html"});}
+\DoxyCodeLine{    hi.CreateHeader(\textcolor{stringliteral}{"Image View Test"}, \textcolor{stringliteral}{"jp"});}
+\DoxyCodeLine{    hi.CreateFooter();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{structHtmlImshow_1_1ImageInfo}{HtmlImshow::ImageInfo}} info;}
+\DoxyCodeLine{    info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_ad8e0fbf30856f82ccc1e4098dac78917}{title}} = \textcolor{stringliteral}{"Lenna"};}
+\DoxyCodeLine{    info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_abe57634809d4e72bfa673388a2420fa8}{width}} = 256;}
+\DoxyCodeLine{    info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_acefc8b29ac8ece87b5aa0b4722fe8ea2}{height}} = 256;}
+\DoxyCodeLine{    hi.AddImageViewSpace(\textcolor{stringliteral}{"../image/color/Lenna.bmp"}, info);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_ad8e0fbf30856f82ccc1e4098dac78917}{title}}=\textcolor{stringliteral}{"Balloon"};}
+\DoxyCodeLine{    hi.AddImageViewSpace(\textcolor{stringliteral}{"../image/color/Balloon.bmp"}, info);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_ad8e0fbf30856f82ccc1e4098dac78917}{title}}=\textcolor{stringliteral}{"Aerial"};}
+\DoxyCodeLine{    hi.AddImageViewSpace(\textcolor{stringliteral}{"../image/color/Aerial.bmp"}, info);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    hi.OutputToHtml();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Let\textquotesingle{}s look with the lines.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{html__imshow_8hpp}{html\_imshow.hpp}}>}}
+\end{DoxyCode}
+
+
+This is the only .hpp that you need to include.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classHtmlImshow}{HtmlImshow}} hi(\textcolor{stringliteral}{"test.html"});}
+\end{DoxyCode}
+
+
+When you call \mbox{\hyperlink{classHtmlImshow}{Html\+Imshow}} class you need to set the path and name of output html file.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{hi.CreateHeader(\textcolor{stringliteral}{"Image View Test"}, \textcolor{stringliteral}{"jp"});}
+\DoxyCodeLine{hi.CreateFooter();}
+\end{DoxyCode}
+
+
+These two lines are creating header and footer of html file.
+
+If you want to create English pages, please change \char`\"{}jp\char`\"{} to \char`\"{}en\char`\"{}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo}{HtmlImshow::ImageInfo}} info;}
+\DoxyCodeLine{info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_ad8e0fbf30856f82ccc1e4098dac78917}{title}} = \textcolor{stringliteral}{"Lenna"};}
+\DoxyCodeLine{info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_abe57634809d4e72bfa673388a2420fa8}{width}} = 256;}
+\DoxyCodeLine{info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_acefc8b29ac8ece87b5aa0b4722fe8ea2}{height}} = 256;}
+\DoxyCodeLine{hi.AddImageViewSpace(\textcolor{stringliteral}{"../image/color/Lenna.bmp"}, info);}
+\DoxyCodeLine{}
+\DoxyCodeLine{info.\mbox{\hyperlink{structHtmlImshow_1_1ImageInfo_ad8e0fbf30856f82ccc1e4098dac78917}{title}}=\textcolor{stringliteral}{"Balloon"};}
+\DoxyCodeLine{hi.AddImageViewSpace(\textcolor{stringliteral}{"../image/color/Balloon.bmp"}, info);}
+\end{DoxyCode}
+
+
+Next is setting of image that you want to show in the html page.
+
+\mbox{\hyperlink{classHtmlImshow}{Html\+Imshow}} class has struct type called Image\+Info.
+
+This type has three variables. title of image(std\+::string), width of image(int), height of image(int).
+
+You need to define this to show image.
+
+And Add\+Image\+View\+Space function will set these configuration and image path to output file additionaly.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{hi.OutputToHtml();}
+\end{DoxyCode}
+
+
+Finally Output\+To\+Html() function will write all the code that you created in your app to html file which you have selected at the beginning.\hypertarget{md_README_autotoc_md7}{}\doxysubsection{How to open html file?}\label{md_README_autotoc_md7}
+While you are using W\+SL, you can open Linux direcotries from exploreers in you Windows.
+
+Open you explorer and enter the path below. \begin{DoxyVerb}\\wsl$
+\end{DoxyVerb}
+
+
+Then you can access to your Ubuntu in W\+SL.
+
+
+
+Move to your project directory, and double click html file that you created.
+
+Finally you can see the image below.
+
+ 
