@@ -200,3 +200,11 @@ Move to your project directory, and double click html file that you created.
 Finally you can see the image below.
 
 ![Result](image/html_imshow_sample.png)
+
+
+### How to open html file? #2
+
+Or if you are using VSCode, install extension call "Live Server".
+
+This extension will keep your browser updated while you are editing your html file.
+
